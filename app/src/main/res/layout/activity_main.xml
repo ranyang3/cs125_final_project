@@ -1,131 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".MainActivity">
+    android:background="#FFFFFF"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/borderLayout"
-        android:layout_width="350dp"
-        android:layout_height="598dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical"
-        android:background="@drawable/my_border"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/checkboxLayout"
-        android:layout_width="293dp"
-        android:layout_height="462dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <CheckBox
-            android:id="@+id/CheckBox1"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Task 1"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="471dp" />
+            android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Task 2"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="393dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Task 3"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="158dp" />
+                <TextView
+                    android:id="@+id/today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="48dp"
+                    android:fontFamily="@drawable/TODAY"
+                    android:text="@string/TODAY"
+                    android:textSize="36sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <CheckBox
-            android:id="@+id/checkBox4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Task 4"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="314dp" />
+                <!--<TextView-->
+                <!--android:id="@+id/date"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:fontFamily="@drawable/TODAY"-->
+                <!--android:text="date"-->
+                <!--android:textAlignment="viewEnd" />-->
 
-        <CheckBox
-            android:id="@+id/checkBox5"
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginStart="180dp"
+                android:background="@drawable/betterAdd"
+                tools:layout_editor_absoluteY="10dp" />
+
+        </LinearLayout>
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Task 5"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="237dp" />
+            android:layout_height="2dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/colorPrimaryDark"
+            android:textAlignment="center" />
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/reviewButton"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Review"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkboxLayout" />
+        android:layout_marginTop="20dp"
+        android:id="@+id/todos">
 
-    <EditText
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center_vertical|end"
-        android:inputType="date"
-        android:text="4/24/19"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/borderLayout"
-        app:layout_constraintEnd_toEndOf="@+id/borderLayout" />
+    </android.support.v7.widget.RecyclerView>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/goodjob"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:capitalize="none"
-        android:text="Today"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="36sp"
-        app:fontFamily="sans-serif-condensed-medium"
-        app:layout_constraintBottom_toTopOf="@+id/borderLayout"
-        app:layout_constraintStart_toStartOf="@+id/borderLayout" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginRight="16dp"
+        android:text="another productive day!"
+        android:textAlignment="center"
+        android:textSize="16sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
