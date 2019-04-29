@@ -1,16 +1,16 @@
 package com.example.cs125_final_project;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+import android.widget.ListView;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     TextView today, goodjob;
     Button add;
-    RecyclerView todos;
+    ListView todos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
