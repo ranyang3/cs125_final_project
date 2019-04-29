@@ -137,17 +137,17 @@
 
     <Button
         android:id="@+id/savetask"
-        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
-        android:text="Submit to Stop Procrastination"
-        android:textColor="#FFF"
+        android:layout_marginRight="16dp"
         android:background="@color/colorPrimaryDark"
-        android:textAllCaps="false"
-        android:textSize="22sp"
         android:fontFamily="@string/TODAY"
-        android:layout_width="match_parent"
-        android:layout_height="55dp" />
+        android:text="Save to Plan My Day"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/cancel"
