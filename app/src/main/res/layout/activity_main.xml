@@ -31,7 +31,6 @@
                     android:layout_marginStart="52dp"
                     android:layout_marginLeft="52dp"
                     android:layout_marginTop="48dp"
-                    android:fontFamily="@drawable/today"
                     android:text="@string/TODAY"
                     android:textSize="36sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -69,20 +68,20 @@
 
     </LinearLayout>
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:id="@+id/todos">
-
-    </ListView>
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/todos" />
 
     <TextView
         android:id="@+id/goodjob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
         android:text="@string/good_job"
         android:textAlignment="center"

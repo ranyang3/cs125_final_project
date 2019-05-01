@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4F4"
-    tools:context=".MainActivity">
+    tools:context=".NewTask">
 
 
     <LinearLayout
@@ -67,6 +67,7 @@
                 android:layout_height="55dp"
                 android:hint="Set a goal"
                 android:inputType="text"
+                android:maxLength="25"
                 android:paddingLeft="12dp"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="#B5B5B5" />
@@ -126,6 +127,7 @@
                 android:layout_height="55dp"
                 android:hint="How long will it take"
                 android:inputType="text"
+                android:maxLength="25"
                 android:paddingLeft="12dp"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="#B5B5B5" />
@@ -143,7 +145,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="16dp"
         android:background="@color/colorPrimaryDark"
-        android:fontFamily="@string/TODAY"
         android:text="Save to Plan My Day"
         android:textAllCaps="false"
         android:textColor="#FFF"
@@ -158,7 +159,6 @@
         android:textColor="#AFAFAF"
         android:textAllCaps="false"
         android:textSize="22sp"
-        android:fontFamily="@string/TODAY"
         android:layout_width="match_parent"
         android:layout_height="55dp" />
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">My Day</string>
     <string name="TODAY">TODAY</string>
     <string name="good_job">Another Productive Day!</string>
 </resources>
