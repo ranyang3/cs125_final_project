@@ -2,4 +2,17 @@
     <string name="app_name">My Day</string>
     <string name="TODAY">TODAY</string>
     <string name="good_job">Another Productive Day!</string>
+    <string name="in_progress">IN PROGRESS</string>
+    <string name="edit_my_goal">Edit My Goal</string>
+    <string name="add_title">Add Title</string>
+    <string name="set_a_goal">Set a goal</string>
+    <string name="description">Description</string>
+    <string name="do_it_step_by_step">Do it step by step</string>
+    <string name="time">Time</string>
+    <string name="how_long_will_it_take">How long will it take</string>
+    <string name="save_update">Save Update</string>
+    <string name="delete">Delete</string>
+    <string name="a_new_goal">A New Goal</string>
+    <string name="save_to_plan_my_day">Save to Plan My Day</string>
+    <string name="cancel">Cancel</string>
 </resources>

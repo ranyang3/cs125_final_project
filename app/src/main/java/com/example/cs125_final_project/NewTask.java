@@ -26,6 +26,8 @@ public class NewTask extends AppCompatActivity {
 
     DatabaseReference reference;
     Integer taskID = new Random().nextInt();
+    String taskKey = Integer.toString(taskID);
+    String initialTaskState = "IN PROGRESS";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,8 @@ public class NewTask extends AppCompatActivity {
                         dataSnapshot.getRef().child("task_title").setValue(goalbox.getText().toString());
                         dataSnapshot.getRef().child("task_detail").setValue(descriptionbox.getText().toString());
                         dataSnapshot.getRef().child("task_length").setValue(timebox.getText().toString());
+                        dataSnapshot.getRef().child("task_state").setValue(initialTaskState);
+                        dataSnapshot.getRef().child("task_key").setValue(taskKey);
 
                         Intent backToMain = new Intent(NewTask.this, MainActivity.class);
                         startActivity(backToMain);
@@ -67,6 +71,14 @@ public class NewTask extends AppCompatActivity {
 
                     }
                 });
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backToMain = new Intent(NewTask.this, MainActivity.class);
+                startActivity(backToMain);
             }
         });
     }

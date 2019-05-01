@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.Button;
 import android.widget.TextView;
@@ -51,7 +52,7 @@ public class MainActivity extends Activity {
         //working with data
         todoList = findViewById(R.id.todos);
         todoList.setLayoutManager(new LinearLayoutManager(this));
-        list = new ArrayList<MyTaskItem>();
+        list = new ArrayList<>();
 
         //get data from firebase
         reference = FirebaseDatabase.getInstance().getReference().child("MyTaskList");

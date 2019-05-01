@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4F4"
-    tools:context=".NewTask">
+    tools:context=".EditTask">
 
 
     <LinearLayout
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="18dp"
-            android:text="@string/a_new_goal"
+            android:text="@string/edit_my_goal"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="26sp" />
@@ -141,24 +141,24 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/savetask"
+        android:id="@+id/btnSaveUpdate"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="16dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/save_to_plan_my_day"
+        android:text="@string/save_update"
         android:textAllCaps="false"
         android:textColor="#FFF"
         android:textSize="22sp" />
 
     <Button
-        android:id="@+id/cancel"
+        android:id="@+id/btnDelete"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="14dp"
-        android:text="@string/cancel"
+        android:text="@string/delete"
         android:textColor="#AFAFAF"
         android:textAllCaps="false"
         android:textSize="22sp"
